@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio de Evidencias · Física I · Andreina Leal Vega</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Architects+Daughter&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff5f8;--bg2:#ffe8f0;--card:#ffffff;
+  --pink:#e8447a;--pink-soft:#f7a8c4;--pink-pale:#ffd6e7;--pink-deep:#c2185b;
+  --rose:#fff0f5;--ink:#3a1a2e;--ink-soft:#7a4a62;--ink-faint:#c490aa;
+  --border:#f7c5d8;--max:1080px;
+}
+*{box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Nunito",sans-serif;line-height:1.65;
+  background-image:radial-gradient(var(--pink-pale) 1.5px,transparent 1.5px);
+  background-size:28px 28px;-webkit-font-smoothing:antialiased;
+}
+h1,h2{font-family:"Nunito",sans-serif;font-weight:800;margin:0;color:var(--ink);}
+p{margin:0 0 .9em 0;color:var(--ink-soft);}a{color:var(--pink);}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 26px;position:relative;}
+
+nav.topnav{position:sticky;top:0;z-index:50;background:rgba(255,245,248,0.93);backdrop-filter:blur(12px);border-bottom:2.5px solid var(--pink-soft);}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:14px;height:56px;}
+.brand{font-family:"Nunito",sans-serif;font-weight:800;font-size:1rem;color:var(--ink);white-space:nowrap;}
+.brand span{color:var(--pink);}
+.nav-links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1;}
+.nav-links::-webkit-scrollbar{display:none;}
+.nav-links a{font-family:"Space Mono",monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:.03em;color:var(--ink-faint);padding:5px 8px;white-space:nowrap;border-radius:20px;transition:background .15s,color .15s;}
+.nav-links a:hover{color:var(--pink);background:var(--pink-pale);}
+.nav-links a.active{color:var(--pink);background:var(--pink-pale);font-weight:700;}
+
+header.hero{padding:56px 0 44px;position:relative;overflow:hidden;}
+.hero-deco{position:absolute;right:-20px;top:-10px;font-size:200px;opacity:0.055;pointer-events:none;user-select:none;}
+.avance-pill{display:inline-block;background:var(--pink);color:#fff;font-family:"Space Mono",monospace;font-size:0.7rem;letter-spacing:.06em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:16px;}
+h1.title{font-size:clamp(1.9rem,4.2vw,2.9rem);max-width:720px;line-height:1.2;font-weight:800;}
+h1.title .pink{color:var(--pink);}
+p.lede{max-width:560px;font-size:1rem;margin-top:14px;}
+.info-card{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px;}
+.info-pill{background:var(--card);border:2px solid var(--border);border-radius:20px;padding:6px 14px;font-family:"Space Mono",monospace;font-size:0.72rem;color:var(--ink-soft);box-shadow:0 2px 8px rgba(232,68,122,0.08);}
+.info-pill b{color:var(--pink);}
+
+.section-divider{border:none;border-top:3px solid var(--pink-soft);margin:0;padding:0;}
+.module-header{padding:28px 0 6px;text-align:center;}
+.module-header h2{font-size:1.5rem;color:var(--ink);}
+.module-badge{display:inline-block;background:var(--pink-pale);color:var(--pink);font-family:"Space Mono",monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:.05em;padding:5px 16px;border-radius:20px;margin-bottom:8px;}
+
+section.intro{padding:36px 0 8px;border-top:2px dashed var(--border);}
+.intro h2{font-size:1.35rem;margin-bottom:10px;}
+.intro p{max-width:700px;}
+
+section.topic{padding:44px 0;border-top:2px dashed var(--border);scroll-margin-top:66px;}
+.topic-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start;}
+section.topic:nth-of-type(even) .topic-grid{direction:rtl;}
+section.topic:nth-of-type(even) .topic-grid>*{direction:ltr;}
+
+.topic-num-wrap{display:flex;align-items:center;gap:11px;margin-bottom:9px;}
+.topic-num{width:44px;height:44px;border-radius:50%;background:var(--c,var(--pink));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;color:#fff;box-shadow:0 4px 12px rgba(232,68,122,0.28);flex-shrink:0;}
+.week-badge{font-family:"Space Mono",monospace;font-size:0.68rem;text-transform:uppercase;background:var(--pink-pale);color:var(--pink);padding:4px 11px;border-radius:20px;}
+.topic-text h2{font-size:1.28rem;margin:5px 0 14px;line-height:1.3;}
+
+.section-label{font-family:"Architects Daughter",cursive;font-size:0.98rem;color:var(--c,var(--pink));margin-bottom:4px;display:flex;align-items:center;gap:5px;}
+.section-label::before{content:"\2738";}
+
+.eq-box{font-family:"Space Mono",monospace;font-size:0.82rem;background:linear-gradient(135deg,#fff5f8,#ffe8f2);border:2px solid var(--pink-soft);border-radius:16px;padding:13px 17px;margin:7px 0 16px;line-height:1.95;color:var(--pink-deep);box-shadow:0 3px 10px rgba(232,68,122,0.09);}
+.eq-box sub{font-size:.7em;}
+
+.just-box{background:var(--card);border:2px solid var(--border);border-radius:16px;padding:16px 18px 14px;position:relative;box-shadow:0 4px 14px rgba(232,68,122,0.07);}
+.just-box::before{content:"\1F4AD";position:absolute;top:-13px;left:14px;font-size:1.25rem;}
+.just-box p{color:var(--ink-soft);font-size:0.93rem;margin:0;}
+
+figure.diagram-frame{background:var(--card);border:2.5px solid var(--border);border-radius:20px;padding:20px 18px 14px;margin:0;box-shadow:0 6px 20px rgba(232,68,122,0.09);position:relative;transform:rotate(var(--rot,0.5deg));}
+.deco-bow{position:absolute;top:-13px;right:16px;font-size:1.5rem;}
+figure.diagram-frame svg{width:100%;height:auto;display:block;}
+figcaption{font-family:"Architects Daughter",cursive;font-size:0.9rem;color:var(--ink-faint);margin-top:10px;border-top:1.5px dashed var(--border);padding-top:9px;}
+figcaption b{color:var(--ink-soft);}
+
+.lbl{font-family:"Space Mono",monospace;font-size:11px;fill:#7a4a62;}
+.lbl-p{fill:#e8447a;}.lbl-d{fill:#c2185b;}.lbl-m{fill:#8e44ad;}.lbl-g{fill:#2c7a4b;}
+
+footer{border-top:2.5px solid var(--pink-soft);padding:44px 0 54px;margin-top:20px;background:var(--rose);}
+.footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;}
+.signature{font-family:"Architects Daughter",cursive;font-size:1.85rem;color:var(--pink);margin:0;}
+.type-line{font-family:"Space Mono",monospace;font-size:0.72rem;color:var(--ink-faint);margin:0;}
+
+@media(max-width:820px){
+  .topic-grid{grid-template-columns:1fr;gap:24px;}
+  section.topic:nth-of-type(even) .topic-grid{direction:ltr;}
+  header.hero{padding:38px 0 32px;}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<marker id="arr-p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#e8447a"/></marker>
+<marker id="arr-d" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#c2185b"/></marker>
+<marker id="arr-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#8e44ad"/></marker>
+<marker id="arr-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#2c7a4b"/></marker>
+</defs>
+</svg>
+
+<nav class="topnav">
+<div class="nav-inner">
+  <div class="brand">&#127872; <span>Física I</span></div>
+  <div class="nav-links" id="navLinks">
+    <a href="#inicio">Inicio</a>
+    <a href="#t1">01</a><a href="#t2">02</a><a href="#t3">03</a><a href="#t4">04</a>
+    <a href="#t5">05</a><a href="#t6">06</a><a href="#t7">07</a><a href="#t8">08</a>
+    <a href="#t9">09</a><a href="#t10">10</a><a href="#t11">11</a><a href="#t12">12</a>
+    <a href="#t13">13</a><a href="#t14">14</a><a href="#t15">15</a><a href="#t16">16</a>
+    <a href="#t17">17</a><a href="#t18">18</a><a href="#t19">19</a><a href="#t20">20</a>
+    <a href="#t21">21</a><a href="#t22">22</a><a href="#t23">23</a><a href="#t24">24</a>
+    <a href="#t25">25</a><a href="#t26">26</a><a href="#t27">27</a>
+  </div>
+</div>
+</nav>
+
+<header class="hero" id="inicio">
+<div class="wrap">
+  <div class="hero-deco">&#127872;</div>
+  <div class="avance-pill">&#10022; Portafolio Completo &middot; Semanas 1&ndash;12</div>
+  <h1 class="title">De la <span class="pink">ecuaci&oacute;n</span> al <span class="pink">motor</span>: f&iacute;sica aplicada al desarrollo de software</h1>
+  <p class="lede">Portafolio de evidencias completo donde cada concepto de cinem&aacute;tica, din&aacute;mica, conservaci&oacute;n y gravitaci&oacute;n visto en clase se traduce en un caso concreto de ingenier&iacute;a de software.</p>
+  <div class="info-card">
+    <span class="info-pill">Universidad <b>CENFOTEC</b></span>
+    <span class="info-pill">Curso <b>FUN-18</b> &middot; F&iacute;sica I</span>
+    <span class="info-pill">Secci&oacute;n <b>FCV2</b> &middot; Periodo <b>2026-C2</b></span>
+    <span class="info-pill">Docente <b>Andr&eacute;s Castro N&uacute;&ntilde;ez</b></span>
+  </div>
+</div>
+</header>
+
+<section class="intro">
+<div class="wrap">
+  <h2>Acerca de este portafolio</h2>
+  <p>Este portafolio recopila los temas trabajados durante las semanas 1 a 12 del curso: vectores y cinem&aacute;tica, movimiento parab&oacute;lico y circular, leyes de Newton, fuerzas el&aacute;sticas, conservaci&oacute;n de la energ&iacute;a y el momento lineal, din&aacute;mica rotacional, gravitaci&oacute;n universal movimiento arm&oacute;nico simple, ondas mec&aacute;nicas, din&aacute;mica de fluidos y termodin&aacute;mica. Cada tema incluye un caso espec&iacute;fico de Ingenier&iacute;a de Software, el concepto f&iacute;sico aplicado y la justificaci&oacute;n de por qu&eacute; la f&iacute;sica es la herramienta correcta.</p>
+</div>
+</section>
+
+<!-- MODULE 1 HEADER -->
+<div class="module-header"><div class="wrap"><span class="module-badge">&#127872; Avance 1 &middot; Semanas 1&ndash;5</span><h2>Cinem&aacute;tica, Din&aacute;mica y Conservaci&oacute;n</h2></div></div>
+
+<!-- T1 -->
+<section class="topic" id="t1">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#e8447a">01</div><span class="week-badge">Semana 1</span></div>
+  <h2>Vectores y magnitudes en cinem&aacute;tica</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un juego 2D de vista superior (estilo RPG), cuando el jugador hace clic en un punto del mapa, el personaje debe desplazarse en l&iacute;nea recta desde su posici&oacute;n actual hasta ese punto, sin importar el &aacute;ngulo del trayecto.</p>
+  <div class="eq-box">
+    &Delta;r&#8407; = (x<sub>2</sub>&minus;x<sub>1</sub>, y<sub>2</sub>&minus;y<sub>1</sub>)<br>
+    d = &radic;(&Delta;x&sup2; + &Delta;y&sup2;)<br>
+    &theta; = arctan(&Delta;y / &Delta;x)
+  </div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>Con vectores el motor calcula autom&aacute;ticamente magnitud y direcci&oacute;n hacia cualquier punto del mapa. La alternativa no f&iacute;sica &mdash;movimientos fijos en 4 u 8 direcciones&mdash; no permite desplazamiento libre en cualquier &aacute;ngulo y se ve poco natural.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.8deg">
+  <div class="deco-bow">&#127872;</div>
+  <svg viewBox="0 0 380 260">
+    <line x1="40" y1="220" x2="350" y2="220" stroke="#f7c5d8" stroke-width="1.4"/>
+    <line x1="40" y1="220" x2="40" y2="30" stroke="#f7c5d8" stroke-width="1.4"/>
+    <circle cx="90" cy="190" r="4.5" fill="#c2185b"/>
+    <circle cx="290" cy="70" r="4.5" fill="#2c7a4b"/>
+    <line x1="90" y1="190" x2="290" y2="190" stroke="#f7c5d8" stroke-width="1" stroke-dasharray="3 4"/>
+    <line x1="290" y1="190" x2="290" y2="70" stroke="#f7c5d8" stroke-width="1" stroke-dasharray="3 4"/>
+    <line x1="90" y1="190" x2="290" y2="70" stroke="#e8447a" stroke-width="2.4" marker-end="url(#arr-p)"/>
+    <path d="M120,190 A 30 30 0 0 0 105,165" fill="none" stroke="#f7a8c4" stroke-width="1"/>
+    <text x="352" y="224" class="lbl">x</text><text x="28" y="30" class="lbl">y</text>
+    <text x="76" y="208" class="lbl lbl-d">r&#8407;&#8321;</text><text x="294" y="68" class="lbl lbl-g">r&#8407;&#8322;</text>
+    <text x="176" y="206" class="lbl">&Delta;x</text><text x="296" y="133" class="lbl">&Delta;y</text>
+    <text x="148" y="114" class="lbl lbl-p">&Delta;r&#8407; (d,&theta;)</text>
+    <text x="120" y="178" class="lbl">&theta;</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> diagrama del vector desplazamiento entre dos puntos del mapa, con magnitud y &aacute;ngulo.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T2 -->
+<section class="topic" id="t2">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#d81b60">02</div><span class="week-badge">Semana 1</span></div>
+  <h2>MRU y MRUA</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>La aceleraci&oacute;n de un veh&iacute;culo en un juego de carreras al presionar el acelerador (MRUA), frente a un objeto que se mueve a velocidad constante como una plataforma m&oacute;vil en un platformer (MRU).</p>
+  <div class="eq-box">MRU&nbsp;&nbsp; x(t) = x<sub>0</sub> + v&middot;t<br>MRUA&nbsp; x(t) = x<sub>0</sub> + v<sub>0</sub>t + &frac12;at&sup2;</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>Aplicar MRUA hace que el cambio de velocidad del veh&iacute;culo sea progresivo y cre&iacute;ble. La alternativa no f&iacute;sica &mdash;cambiar la velocidad de golpe&mdash; se sentir&iacute;a artificial y romper&iacute;a la inmersi&oacute;n del jugador.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.7deg">
+  <div class="deco-bow">&#127800;</div>
+  <svg viewBox="0 0 380 260">
+    <line x1="40" y1="220" x2="350" y2="220" stroke="#f7c5d8" stroke-width="1.4"/>
+    <line x1="40" y1="220" x2="40" y2="30" stroke="#f7c5d8" stroke-width="1.4"/>
+    <line x1="40" y1="200" x2="320" y2="60" stroke="#e8447a" stroke-width="2.4"/>
+    <path d="M40,210 Q 160,200 230,140 T 320,40" fill="none" stroke="#c2185b" stroke-width="2.4"/>
+    <text x="352" y="224" class="lbl">t</text><text x="20" y="30" class="lbl">x</text>
+    <text x="290" y="50" class="lbl lbl-p">MRU</text>
+    <text x="250" y="120" class="lbl lbl-d">MRUA</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> gr&aacute;fica posici&oacute;n vs. tiempo: recta para MRU, par&aacute;bola para MRUA.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T3 -->
+<section class="topic" id="t3">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#8e44ad">03</div><span class="week-badge">Semanas 1&ndash;2</span></div>
+  <h2>Ca&iacute;da libre y movimiento parab&oacute;lico</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>C&aacute;lculo de la trayectoria parab&oacute;lica en un juego tipo Angry Birds, al lanzar un proyectil con un &aacute;ngulo y velocidad inicial definidos por el jugador mediante una resortera.</p>
+  <div class="eq-box">x(t) = x<sub>0</sub> + v<sub>0x</sub>t<br>y(t) = y<sub>0</sub> + v<sub>0y</sub>t &minus; &frac12;gt&sup2;<br>v<sub>0x</sub> = v<sub>0</sub>cos&theta; &nbsp; v<sub>0y</sub> = v<sub>0</sub>sen&theta;</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>Estas ecuaciones generan una trayectoria que responde din&aacute;micamente al &aacute;ngulo y la fuerza del lanzamiento. La alternativa no f&iacute;sica &mdash;una curva precalculada fija&mdash; no reaccionar&iacute;a a la interacci&oacute;n real del jugador.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.6deg">
+  <div class="deco-bow">&#127801;</div>
+  <svg viewBox="0 0 380 260">
+    <line x1="30" y1="220" x2="360" y2="220" stroke="#f7c5d8" stroke-width="1.4"/>
+    <path d="M40,210 Q 195,30 350,160" fill="none" stroke="#e8447a" stroke-width="2" stroke-dasharray="5 6" opacity="0.85"/>
+    <circle cx="40" cy="210" r="4" fill="#c2185b"/>
+    <line x1="40" y1="210" x2="85" y2="210" stroke="#c2185b" stroke-width="2" marker-end="url(#arr-d)"/>
+    <line x1="40" y1="210" x2="40" y2="152" stroke="#8e44ad" stroke-width="2" marker-end="url(#arr-m)"/>
+    <circle cx="195" cy="33" r="4" fill="#e8447a"/>
+    <line x1="195" y1="33" x2="240" y2="33" stroke="#c2185b" stroke-width="2" marker-end="url(#arr-d)"/>
+    <circle cx="350" cy="160" r="4" fill="#8e44ad"/>
+    <line x1="350" y1="160" x2="392" y2="160" stroke="#c2185b" stroke-width="2" marker-end="url(#arr-d)"/>
+    <line x1="350" y1="160" x2="350" y2="205" stroke="#8e44ad" stroke-width="2" marker-end="url(#arr-m)"/>
+    <text x="56" y="226" class="lbl lbl-d">v<tspan font-size="8">0x</tspan></text>
+    <text x="4" y="172" class="lbl lbl-m">v<tspan font-size="8">0y</tspan></text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> trayectoria parab&oacute;lica con velocidad descompuesta en x e y en tres instantes.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T4 -->
+<section class="topic" id="t4">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#e8447a">04</div><span class="week-badge">Semana 2</span></div>
+  <h2>Movimiento circular uniforme</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>Una luna orbitando un planeta en una simulaci&oacute;n, o el barrido giratorio de un radar en un juego de sigilo: ambos giran a radio y velocidad angular constantes.</p>
+  <div class="eq-box">&theta;(t) = &omega;t<br>v = r&omega;<br>a<sub>c</sub> = v&sup2; / r</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>Estas f&oacute;rmulas garantizan una &oacute;rbita de radio constante y velocidad angular fija, consistente cuadro a cuadro. Animarla manualmente ser&iacute;a tedioso y propenso a errores de sincronizaci&oacute;n entre frames.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.6deg">
+  <div class="deco-bow">&#127872;</div>
+  <svg viewBox="0 0 380 260">
+    <circle cx="190" cy="130" r="78" fill="none" stroke="#f7c5d8" stroke-width="1.5"/>
+    <line x1="190" y1="130" x2="190" y2="52" stroke="#f7c5d8" stroke-width="1" stroke-dasharray="3 4"/>
+    <circle cx="190" cy="130" r="3" fill="#f7a8c4"/>
+    <circle cx="190" cy="52" r="5" fill="#e8447a"/>
+    <line x1="190" y1="52" x2="255" y2="52" stroke="#e8447a" stroke-width="2.3" marker-end="url(#arr-p)"/>
+    <line x1="190" y1="52" x2="190" y2="105" stroke="#c2185b" stroke-width="2.3" marker-end="url(#arr-d)"/>
+    <path d="M168,90 A 30 30 0 0 1 198,75" fill="none" stroke="#f7a8c4" stroke-width="1"/>
+    <text x="194" y="94" class="lbl">r</text>
+    <text x="260" y="48" class="lbl lbl-p">v</text>
+    <text x="194" y="80" class="lbl lbl-d">a<tspan font-size="8">c</tspan></text>
+    <text x="152" y="78" class="lbl">&omega;</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> c&iacute;rculo con velocidad tangencial y aceleraci&oacute;n centr&iacute;peta apuntando al centro.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T5 -->
+<section class="topic" id="t5">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#d81b60">05</div><span class="week-badge">Semana 3</span></div>
+  <h2>Leyes de Newton, cuerpo libre y fricci&oacute;n</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>El motor de f&iacute;sica de un juego de plataformas, donde un personaje se desliza distinto sobre hielo (poca fricci&oacute;n) que sobre una superficie rugosa (alta fricci&oacute;n) al soltar el bot&oacute;n de movimiento.</p>
+  <div class="eq-box">F = ma<br>f = &mu;<sub>k</sub>N</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>Variar &mu;<sub>k</sub> seg&uacute;n la superficie da una sensaci&oacute;n de control realista y ajustable. La alternativa no f&iacute;sica &mdash;la misma deceleraci&oacute;n fija en cualquier superficie&mdash; se ver&iacute;a artificial e id&eacute;ntica en todos los niveles.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.7deg">
+  <div class="deco-bow">&#127801;</div>
+  <svg viewBox="0 0 380 260">
+    <rect x="60" y="170" width="260" height="14" fill="var(--pink-pale)" stroke="#f7c5d8"/>
+    <rect x="170" y="130" width="50" height="40" rx="4" fill="var(--card)" stroke="#e8447a" stroke-width="1.6"/>
+    <line x1="195" y1="130" x2="195" y2="80" stroke="#e8447a" stroke-width="2.2" marker-end="url(#arr-p)"/>
+    <line x1="195" y1="170" x2="195" y2="220" stroke="#c2185b" stroke-width="2.2" marker-end="url(#arr-d)"/>
+    <line x1="170" y1="150" x2="120" y2="150" stroke="#8e44ad" stroke-width="2.2" marker-end="url(#arr-m)"/>
+    <line x1="220" y1="150" x2="270" y2="150" stroke="#2c7a4b" stroke-width="2.2" marker-end="url(#arr-g)"/>
+    <text x="198" y="92" class="lbl lbl-p">N</text>
+    <text x="198" y="210" class="lbl lbl-d">mg</text>
+    <text x="116" y="142" class="lbl lbl-m">f</text>
+    <text x="272" y="142" class="lbl lbl-g">v</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> diagrama de cuerpo libre del personaje con las fuerzas N, mg y fricci&oacute;n f.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T6 -->
+<section class="topic" id="t6">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#8e44ad">06</div><span class="week-badge">Semana 3</span></div>
+  <h2>Fuerzas el&aacute;sticas y curvas con peralte</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>Una resortera que impulsa un proyectil seg&uacute;n cu&aacute;nto se estira (como en Angry Birds), y la velocidad m&aacute;xima segura de un kart en una curva peraltada de un juego de carreras.</p>
+  <div class="eq-box">Resorte&nbsp; F = &minus;kx<br>Peralte&nbsp; F<sub>c</sub> = mv&sup2; / r</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>La ley de Hooke hace que la fuerza de lanzamiento sea proporcional e intuitiva seg&uacute;n el estiramiento. El c&aacute;lculo con peralte evita que el juego decida &ldquo;a ojo&rdquo; cu&aacute;ndo un veh&iacute;culo se sale de la pista, d&aacute;ndole una base f&iacute;sica real.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.5deg">
+  <div class="deco-bow">&#127872;</div>
+  <svg viewBox="0 0 380 260">
+    <rect x="30" y="60" width="14" height="120" fill="var(--pink-pale)" stroke="#f7c5d8"/>
+    <polyline points="44,120 58,100 72,140 86,100 100,140 114,100 128,140 142,120" fill="none" stroke="#e8447a" stroke-width="2"/>
+    <rect x="142" y="100" width="40" height="40" rx="3" fill="var(--card)" stroke="#c2185b" stroke-width="1.6"/>
+    <line x1="182" y1="120" x2="225" y2="120" stroke="#c2185b" stroke-width="2.2" marker-end="url(#arr-d)"/>
+    <text x="183" y="112" class="lbl lbl-d">F=&minus;kx</text>
+    <line x1="30" y1="225" x2="380" y2="225" stroke="#f7c5d8" stroke-width="1"/>
+    <line x1="60" y1="225" x2="300" y2="190" stroke="#f7c5d8" stroke-width="1.4"/>
+    <rect x="160" y="183" width="36" height="20" rx="3" fill="var(--card)" stroke="#8e44ad" stroke-width="1.5" transform="rotate(-12 178 193)"/>
+    <line x1="178" y1="193" x2="155" y2="155" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <line x1="178" y1="193" x2="100" y2="193" stroke="#8e44ad" stroke-width="2" marker-end="url(#arr-m)"/>
+    <text x="124" y="150" class="lbl lbl-p">N</text>
+    <text x="88" y="208" class="lbl lbl-m">F<tspan font-size="8">c</tspan></text>
+    <text x="40" y="242" class="lbl">Peralte (curva)</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> resorte estirado (F=&minus;kx) y secci&oacute;n de una curva peraltada con sus fuerzas.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T7 -->
+<section class="topic" id="t7">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#e8447a">07</div><span class="week-badge">Semana 4</span></div>
+  <h2>Trabajo, energ&iacute;a y su conservaci&oacute;n</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>Una bola en un juego de pinball o de rampas que gana velocidad al descender, en proporci&oacute;n a la altura recorrida.</p>
+  <div class="eq-box">K = &frac12;mv&sup2;<br>U = mgh<br>K<sub>i</sub> + U<sub>i</sub> = K<sub>f</sub> + U<sub>f</sub></div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>La conservaci&oacute;n de la energ&iacute;a permite calcular autom&aacute;ticamente la velocidad de la bola en cualquier punto de la rampa seg&uacute;n su altura, garantizando consistencia f&iacute;sica en niveles con formas distintas, sin animar manualmente cada tramo.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.6deg">
+  <div class="deco-bow">&#127800;</div>
+  <svg viewBox="0 0 380 260">
+    <path d="M30,60 Q 150,40 200,140 T 350,200" fill="none" stroke="#f7c5d8" stroke-width="1.6"/>
+    <circle cx="40" cy="65" r="6" fill="#8e44ad"/>
+    <rect x="20" y="80" width="6" height="120" fill="#c2185b" opacity="0.38"/>
+    <rect x="28" y="194" width="6" height="6" fill="#2c7a4b" opacity="0.6"/>
+    <circle cx="200" cy="142" r="6" fill="#e8447a"/>
+    <rect x="180" y="142" width="6" height="58" fill="#c2185b" opacity="0.52"/>
+    <rect x="188" y="160" width="6" height="40" fill="#2c7a4b" opacity="0.72"/>
+    <circle cx="345" cy="202" r="6" fill="#d81b60"/>
+    <rect x="333" y="140" width="6" height="62" fill="#2c7a4b" opacity="0.82"/>
+    <text x="4" y="215" class="lbl">U&#8595; K&#8593;</text>
+    <text x="316" y="220" class="lbl">U&#8595;&#8595; K&#8593;&#8593;</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> rampa con la bola en tres alturas y sus barras de energ&iacute;a potencial/cin&eacute;tica.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T8 -->
+<section class="topic" id="t8">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#d81b60">08</div><span class="week-badge">Semana 5</span></div>
+  <h2>Momento lineal, impulso y colisiones</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>El sistema de colisiones de un juego de billar/pool, donde dos bolas chocan y deben rebotar con velocidades realistas seg&uacute;n sus masas.</p>
+  <div class="eq-box">m<sub>1</sub>v<sub>1i</sub> + m<sub>2</sub>v<sub>2i</sub> = m<sub>1</sub>v<sub>1f</sub> + m<sub>2</sub>v<sub>2f</sub><br>J = F&Delta;t = &Delta;p</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>La conservaci&oacute;n del momento da velocidades de rebote coherentes y proporcionales a la masa de cada bola. La alternativa no f&iacute;sica &mdash;rebotes con valores fijos&mdash; se ver&iacute;a poco realista entre objetos de distinto tama&ntilde;o.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.5deg">
+  <div class="deco-bow">&#127872;</div>
+  <svg viewBox="0 0 380 260">
+    <text x="30" y="34" class="lbl">Antes</text>
+    <circle cx="100" cy="68" r="13" fill="none" stroke="#e8447a" stroke-width="2"/>
+    <text x="93" y="72" class="lbl lbl-p" font-size="9">m1</text>
+    <line x1="118" y1="68" x2="172" y2="68" stroke="#e8447a" stroke-width="2.2" marker-end="url(#arr-p)"/>
+    <text x="128" y="58" class="lbl lbl-p">v1i</text>
+    <circle cx="270" cy="68" r="17" fill="none" stroke="#c2185b" stroke-width="2"/>
+    <text x="262" y="72" class="lbl lbl-d" font-size="9">m2</text>
+    <line x1="30" y1="112" x2="350" y2="112" stroke="#f7c5d8" stroke-width="1"/>
+    <text x="30" y="146" class="lbl">Despu&eacute;s</text>
+    <circle cx="110" cy="182" r="13" fill="none" stroke="#e8447a" stroke-width="2"/>
+    <text x="103" y="186" class="lbl lbl-p" font-size="9">m1</text>
+    <line x1="93" y1="182" x2="38" y2="182" stroke="#e8447a" stroke-width="2.2" marker-end="url(#arr-p)"/>
+    <text x="42" y="200" class="lbl lbl-p">v1f</text>
+    <circle cx="270" cy="182" r="17" fill="none" stroke="#c2185b" stroke-width="2"/>
+    <text x="262" y="186" class="lbl lbl-d" font-size="9">m2</text>
+    <line x1="291" y1="182" x2="346" y2="182" stroke="#c2185b" stroke-width="2.2" marker-end="url(#arr-d)"/>
+    <text x="298" y="200" class="lbl lbl-d">v2f</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> dos bolas antes y despu&eacute;s de la colisi&oacute;n, con sus vectores de velocidad.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- MODULE 2 HEADER -->
+<hr class="section-divider">
+<div class="module-header"><div class="wrap"><span class="module-badge">&#127872; Avance 2 &middot; Semanas 6&ndash;9</span><h2>Rotaci&oacute;n, Gravitaci&oacute;n y Oscilaciones</h2></div></div>
+
+<!-- T9 -->
+<section class="topic" id="t9">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#e8447a">09</div><span class="week-badge">Semana 6</span></div>
+  <h2>Producto Punto y Producto Cruz</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un motor 3D, calcular si la c&aacute;mara &ldquo;ve&rdquo; un objeto (producto punto para detectar el &aacute;ngulo entre la direcci&oacute;n de visi&oacute;n y el objeto) y generar la normal de una superficie para iluminaci&oacute;n (producto cruz para obtener el vector perpendicular al plano del tri&aacute;ngulo).</p>
+  <div class="eq-box">Punto: C = A&#8407;&middot;B&#8407; = AxBx + AyBy + AzBz<br>Cruz: C&#8407; = A&#8407; &times; B&#8407;<br>|C&#8407;| = |A||B|&middot;sen(&theta;)<br>C&#8407; perpendicular a A&#8407; y a B&#8407;</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>El producto punto detecta si un objeto est&aacute; frente a la c&aacute;mara (dot &lt; 0 = detr&aacute;s, no renderizar). El producto cruz genera la normal de cada tri&aacute;ngulo de la malla 3D para calcular iluminaci&oacute;n correcta. Sin ellos habr&iacute;a que aproximar &aacute;ngulos manualmente, lo cual es impreciso y costoso computacionalmente.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.7deg">
+  <div class="deco-bow">&#127800;</div>
+  <svg viewBox="0 0 380 260">
+    <line x1="40" y1="220" x2="340" y2="220" stroke="#f7c5d8" stroke-width="1.5"/>
+    <line x1="40" y1="220" x2="40" y2="30" stroke="#f7c5d8" stroke-width="1.5"/>
+    <line x1="40" y1="220" x2="140" y2="270" stroke="#f7c5d8" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <text x="342" y="224" class="lbl">x</text><text x="28" y="28" class="lbl">y</text><text x="142" y="274" class="lbl">z</text>
+    <line x1="40" y1="220" x2="240" y2="100" stroke="#e8447a" stroke-width="2.5" marker-end="url(#arr-p)"/>
+    <text x="185" y="90" class="lbl lbl-p">A&#8407;</text>
+    <line x1="40" y1="220" x2="300" y2="170" stroke="#c2185b" stroke-width="2.5" marker-end="url(#arr-d)"/>
+    <text x="278" y="165" class="lbl lbl-d">B&#8407;</text>
+    <line x1="40" y1="220" x2="80" y2="58" stroke="#8e44ad" stroke-width="2.5" marker-end="url(#arr-m)" stroke-dasharray="5 3"/>
+    <text x="84" y="55" class="lbl lbl-m">A&#8407;&times;B&#8407;</text>
+    <path d="M82,220 A42 42 0 0 1 66,188" fill="none" stroke="#f7a8c4" stroke-width="1.3"/>
+    <text x="86" y="202" class="lbl">&theta;</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> sistema 3D con vectores A y B, &aacute;ngulo &theta; y el producto cruz resultante perpendicular al plano que forman.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T10 -->
+<section class="topic" id="t10">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#d81b60">10</div><span class="week-badge">Semana 6</span></div>
+  <h2>Torque (Momento de Torsi&oacute;n)</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En la simulaci&oacute;n de un brazo rob&oacute;tico, calcular cu&aacute;nta fuerza debe aplicar cada servo motor en su articulaci&oacute;n para levantar una carga a una distancia dada, sin que el sistema colapse ni use exceso de energ&iacute;a.</p>
+  <div class="eq-box">&tau;&#8407; = r&#8407; &times; F&#8407;<br>|&tau;| = r &middot; F &middot; sen(&theta;)<br>&tau; = I &middot; &alpha; &nbsp;(an&aacute;logo rotacional de F=ma)</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>El torque define cu&aacute;nta fuerza de giro genera cada motor seg&uacute;n la distancia al pivote. En la simulaci&oacute;n de rob&oacute;tica, esto permite calcular exactamente el torque necesario en cada articulaci&oacute;n para mover la carga, evitando que el software asigne fuerzas arbitrarias que no corresponder&iacute;an al comportamiento f&iacute;sico real del servo.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.7deg">
+  <div class="deco-bow">&#127801;</div>
+  <svg viewBox="0 0 380 260">
+    <circle cx="80" cy="140" r="12" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="2"/>
+    <text x="70" y="144" class="lbl lbl-p" font-size="9">pivot</text>
+    <line x1="80" y1="140" x2="290" y2="140" stroke="#f7a8c4" stroke-width="2.5"/>
+    <text x="175" y="130" class="lbl">r</text>
+    <circle cx="290" cy="140" r="7" fill="var(--pink-pale)" stroke="#c2185b" stroke-width="1.5"/>
+    <line x1="290" y1="147" x2="290" y2="228" stroke="#e8447a" stroke-width="2.5" marker-end="url(#arr-p)"/>
+    <text x="296" y="198" class="lbl lbl-p">F</text>
+    <path d="M130,140 A 52 52 0 0 1 80,100" fill="none" stroke="#c2185b" stroke-width="2.2" stroke-dasharray="5 3" marker-end="url(#arr-d)"/>
+    <text x="56" y="97" class="lbl lbl-d">&tau;</text>
+    <rect x="206" y="210" width="76" height="34" rx="8" fill="var(--pink-pale)" stroke="#f7a8c4" stroke-width="1.5"/>
+    <text x="222" y="232" class="lbl lbl-p">carga</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> brazo rob&oacute;tico con pivot, vector r, fuerza F y torque &tau; que genera rotaci&oacute;n en la articulaci&oacute;n.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T11 -->
+<section class="topic" id="t11">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#8e44ad">11</div><span class="week-badge">Semana 6</span></div>
+  <h2>Momento de Inercia</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un motor de f&iacute;sica de videojuego, simular c&oacute;mo distintos objetos responden distinto al mismo torque: una rueda s&oacute;lida arranca m&aacute;s lento que un aro de igual masa, porque su masa est&aacute; distribuida distinto respecto al eje.</p>
+  <div class="eq-box">I = &Sigma;m<sub>i</sub>r<sub>i</sub>&sup2; (sistema de part&iacute;culas)<br>Disco s&oacute;lido: I = &frac12;MR&sup2;<br>Aro:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I = MR&sup2;<br>&tau; = I &middot; &alpha;</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>El momento de inercia determina qu&eacute; tan dif&iacute;cil es acelerar rotatoriamente un objeto. En el motor de f&iacute;sica, hace que una rueda maciza y un aro con la misma masa respondan diferente al mismo torque, igual que en la realidad. Sin este concepto, todos los objetos rotar&iacute;an igual sin importar su forma o distribuci&oacute;n de masa.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.6deg">
+  <div class="deco-bow">&#127872;</div>
+  <svg viewBox="0 0 380 260">
+    <circle cx="110" cy="125" r="72" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="2"/>
+    <circle cx="110" cy="125" r="6" fill="#e8447a"/>
+    <line x1="110" y1="125" x2="182" y2="125" stroke="#c2185b" stroke-width="2" stroke-dasharray="3 3"/>
+    <text x="138" y="117" class="lbl lbl-d">R</text>
+    <text x="72" y="230" class="lbl lbl-p" font-size="10">I = &frac12;MR&sup2;</text>
+    <circle cx="285" cy="125" r="70" fill="none" stroke="#8e44ad" stroke-width="14"/>
+    <circle cx="285" cy="125" r="4" fill="#8e44ad"/>
+    <line x1="285" y1="125" x2="355" y2="125" stroke="#8e44ad" stroke-width="2" stroke-dasharray="3 3"/>
+    <text x="310" y="117" class="lbl lbl-m">R</text>
+    <text x="248" y="230" class="lbl lbl-m" font-size="10">I = MR&sup2;</text>
+    <text x="60" y="22" class="lbl lbl-d" font-size="9">Misma M, distinta distribuci&oacute;n &rarr; distinto I</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> disco s&oacute;lido vs. aro con igual masa M y radio R, mostrando c&oacute;mo el I distinto genera distinta respuesta rotacional.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T12 -->
+<section class="topic" id="t12">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#e8447a">12</div><span class="week-badge">Semana 6</span></div>
+  <h2>Conservaci&oacute;n del Momento Angular</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>Simular el giro de un personaje patinador que recoge los brazos: al reducir su momento de inercia, su velocidad angular aumenta autom&aacute;ticamente de forma f&iacute;sicamente correcta, sin necesidad de keyframes de animaci&oacute;n.</p>
+  <div class="eq-box">L&#8407; = I &middot; &omega;<br>L&#8407; = r&#8407; &times; p&#8407;<br>L<sub>i</sub> = Lf &nbsp;&rarr;&nbsp; I<sub>i</sub>&middot;&omega;<sub>i</sub> = I<sub>f</sub>&middot;&omega;<sub>f</sub><br>Si I&darr; entonces &omega;&uarr;</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>La conservaci&oacute;n del momento angular explica por qu&eacute; un patinador gira m&aacute;s r&aacute;pido al juntar los brazos. En un videojuego, aplicar esta ley hace que cuando el personaje cambia de postura la velocidad angular se ajuste autom&aacute;ticamente de forma coherente con la f&iacute;sica real, sin que el animador tenga que calcularlo manualmente.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.5deg">
+  <div class="deco-bow">&#127800;</div>
+  <svg viewBox="0 0 380 260">
+    <circle cx="100" cy="130" r="58" fill="none" stroke="var(--pink-pale)" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <circle cx="100" cy="130" r="6" fill="#e8447a"/>
+    <line x1="18" y1="130" x2="88" y2="130" stroke="#f7a8c4" stroke-width="2"/>
+    <line x1="112" y1="130" x2="182" y2="130" stroke="#f7a8c4" stroke-width="2"/>
+    <path d="M148,104 A 56 56 0 0 1 148,156" fill="none" stroke="#e8447a" stroke-width="2.2" marker-end="url(#arr-p)"/>
+    <text x="155" y="138" class="lbl lbl-p">&omega;&#x2081;</text>
+    <text x="52" y="215" class="lbl" font-size="10">I grande &rarr; &omega; lento</text>
+    <circle cx="285" cy="130" r="30" fill="none" stroke="var(--pink-pale)" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <circle cx="285" cy="130" r="6" fill="#c2185b"/>
+    <line x1="256" y1="130" x2="266" y2="130" stroke="#f7a8c4" stroke-width="2"/>
+    <line x1="304" y1="130" x2="314" y2="130" stroke="#f7a8c4" stroke-width="2"/>
+    <path d="M314,112 A 30 30 0 0 1 314,148" fill="none" stroke="#c2185b" stroke-width="2.5" marker-end="url(#arr-d)"/>
+    <text x="318" y="135" class="lbl lbl-d">&omega;&#x2082;</text>
+    <text x="238" y="215" class="lbl" font-size="10">I chico &rarr; &omega; r&aacute;pido</text>
+    <text x="128" y="26" class="lbl lbl-p" font-size="9">L = I&middot;&omega; = constante</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> patinadora con brazos extendidos (I grande, &omega; lento) vs. recogidos (I chico, &omega; r&aacute;pido). L se conserva.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T13 -->
+<section class="topic" id="t13">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#d81b60">13</div><span class="week-badge">Semana 8</span></div>
+  <h2>Ley de Gravitaci&oacute;n Universal</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un simulador espacial tipo Kerbal Space Program, calcular la fuerza gravitacional entre la nave y un planeta para determinar trayectorias de vuelo realistas que cambien seg&uacute;n la masa y la distancia.</p>
+  <div class="eq-box">F = G &middot; m<sub>1</sub> &middot; m<sub>2</sub> / r&sup2;<br>G = 6,67 &times; 10<sup>&minus;11</sup> N&middot;m&sup2;/kg&sup2;<br>r: distancia entre centros de masa<br>F &prop; 1/r&sup2; (ley del cuadrado inverso)</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>Esta ley permite calcular c&oacute;mo var&iacute;a la atracci&oacute;n gravitacional con la distancia entre la nave y el planeta. Sin ella, el simulador tendr&iacute;a que usar gravedad constante, haciendo imposible simular &oacute;rbitas, maniobras de aproximaci&oacute;n o el efecto de alejarse del planeta de forma gradual y f&iacute;sicamente correcta.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.7deg">
+  <div class="deco-bow">&#127872;</div>
+  <svg viewBox="0 0 380 260">
+    <circle cx="95" cy="130" r="55" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="2"/>
+    <text x="70" y="126" class="lbl lbl-p" font-size="10">Planeta</text>
+    <text x="78" y="142" class="lbl lbl-p" font-size="9">M&#x2081;</text>
+    <circle cx="305" cy="130" r="16" fill="#f7a8c4" stroke="#c2185b" stroke-width="1.5"/>
+    <text x="296" y="134" class="lbl lbl-d" font-size="9">nave</text>
+    <line x1="150" y1="130" x2="289" y2="130" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="205" y="118" class="lbl lbl-m">r</text>
+    <line x1="289" y1="130" x2="215" y2="130" stroke="#e8447a" stroke-width="2.5" marker-end="url(#arr-p)"/>
+    <text x="228" y="118" class="lbl lbl-p">F_g</text>
+    <path d="M55,78 Q 195,8 340,78" fill="none" stroke="#f7a8c4" stroke-width="1.8" stroke-dasharray="5 4"/>
+    <text x="150" y="26" class="lbl lbl-p" font-size="9">trayectoria orbital</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> planeta masivo atrayendo una nave a distancia r, con la fuerza gravitacional y la trayectoria orbital resultante.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T14 -->
+<section class="topic" id="t14">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#8e44ad">14</div><span class="week-badge">Semana 8</span></div>
+  <h2>Gravedad terrestre y energ&iacute;a potencial gravitacional</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un simulador de lanzamiento de sat&eacute;lites, calcular c&oacute;mo var&iacute;a la gravedad con la altitud y cu&aacute;nta energ&iacute;a potencial acumula el sat&eacute;lite al subir, para estimar correctamente el combustible necesario en cada etapa del lanzamiento.</p>
+  <div class="eq-box">g = G&middot;M<sub>t</sub> / R<sub>t</sub>&sup2; &asymp; 9,81 m/s&sup2;<br>g(h) = G&middot;M<sub>t</sub> / (R<sub>t</sub>+h)&sup2;<br>U(r) = &minus;G&middot;Mm / r<br>&Delta;U = G&middot;Mm&middot;(1/r<sub>a</sub> &minus; 1/r<sub>b</sub>)</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>La gravedad no es constante con la altura: g(h) disminuye seg&uacute;n la ley del cuadrado inverso. Usar la f&oacute;rmula real en el simulador da una estimaci&oacute;n precisa de la energ&iacute;a para cada altitud, en vez de asumir g=9,81 m/s&sup2; siempre, lo que sobreestimar&iacute;a el combustible requerido en &oacute;rbitas altas y generar&iacute;a trayectorias incorrectas.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.6deg">
+  <div class="deco-bow">&#127801;</div>
+  <svg viewBox="0 0 380 260">
+    <circle cx="90" cy="205" r="50" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="2"/>
+    <text x="68" y="209" class="lbl lbl-p" font-size="9">Tierra M<tspan font-size="7">t</tspan></text>
+    <circle cx="90" cy="138" r="5" fill="#c2185b"/>
+    <line x1="90" y1="143" x2="90" y2="200" stroke="#e8447a" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <text x="96" y="174" class="lbl lbl-d">h&#x2081;</text>
+    <text x="60" y="134" class="lbl lbl-d" font-size="9">g baja</text>
+    <circle cx="90" cy="72" r="5" fill="#8e44ad"/>
+    <line x1="90" y1="77" x2="90" y2="133" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <text x="96" y="110" class="lbl lbl-m">h&#x2082;</text>
+    <text x="60" y="68" class="lbl lbl-m" font-size="9">g m&aacute;s baja</text>
+    <line x1="200" y1="240" x2="360" y2="240" stroke="#f7c5d8" stroke-width="1.2"/>
+    <line x1="200" y1="240" x2="200" y2="20" stroke="#f7c5d8" stroke-width="1.2"/>
+    <path d="M205,235 Q 270,100 355,35" fill="none" stroke="#e8447a" stroke-width="2.2"/>
+    <text x="310" y="58" class="lbl lbl-p">F~1/r&sup2;</text>
+    <text x="340" y="244" class="lbl">r</text><text x="188" y="16" class="lbl">F</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> Tierra con sat&eacute;lites a dos altitudes (g var&iacute;a) y gr&aacute;fica F vs r mostrando la ley del cuadrado inverso.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T15 -->
+<section class="topic" id="t15">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#e8447a">15</div><span class="week-badge">Semana 8</span></div>
+  <h2>Velocidad orbital y de escape</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un simulador espacial, determinar la velocidad exacta que debe tener una nave para mantenerse en &oacute;rbita circular alrededor de un planeta, o para escapar completamente de su campo gravitacional.</p>
+  <div class="eq-box">Orbital: V<sub>o</sub> = &radic;(G&middot;M<sub>t</sub> / r)<br>Escape:&nbsp; V<sub>e</sub> = &radic;(2G&middot;M<sub>t</sub> / r)<br>Va = V<sub>o</sub> &rarr; &oacute;rbita circular<br>Va &lt; V<sub>o</sub> &rarr; cae a superficie<br>Va &gt; V<sub>e</sub> &rarr; escapa al infinito</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>Estas f&oacute;rmulas definen los tres comportamientos posibles de una nave seg&uacute;n su velocidad. En el simulador permiten calcular din&aacute;micamente si la velocidad del jugador es suficiente para orbitar o escapar, generando trayectorias f&iacute;sicamente correctas en vez de usar valores fijos que no cambiar&iacute;an seg&uacute;n la masa o radio del planeta.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.5deg">
+  <div class="deco-bow">&#127872;</div>
+  <svg viewBox="0 0 380 260">
+    <circle cx="150" cy="140" r="52" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="2"/>
+    <text x="130" y="144" class="lbl lbl-p" font-size="9">Planeta</text>
+    <ellipse cx="150" cy="140" rx="112" ry="82" fill="none" stroke="#f7a8c4" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <circle cx="262" cy="140" r="7" fill="#e8447a"/>
+    <line x1="262" y1="133" x2="262" y2="88" stroke="#e8447a" stroke-width="2.2" marker-end="url(#arr-p)"/>
+    <text x="266" y="110" class="lbl lbl-p">V<tspan font-size="7">o</tspan></text>
+    <path d="M222,78 Q 320,18 375,40" fill="none" stroke="#8e44ad" stroke-width="2" stroke-dasharray="5 3"/>
+    <circle cx="222" cy="78" r="5" fill="#8e44ad"/>
+    <line x1="222" y1="78" x2="268" y2="44" stroke="#8e44ad" stroke-width="2" marker-end="url(#arr-m)"/>
+    <text x="270" y="42" class="lbl lbl-m">V<tspan font-size="7">e</tspan></text>
+    <path d="M170,195 Q 95,240 58,228" fill="none" stroke="#c2185b" stroke-width="2" stroke-dasharray="4 3"/>
+    <circle cx="170" cy="195" r="5" fill="#c2185b"/>
+    <line x1="170" y1="195" x2="135" y2="218" stroke="#c2185b" stroke-width="2" marker-end="url(#arr-d)"/>
+    <text x="42" y="248" class="lbl lbl-d" font-size="9">cae (Va&lt;V<tspan font-size="7">o</tspan>)</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> tres trayectorias posibles &mdash; &oacute;rbita circular (V<sub>o</sub>), escape definitivo (V<sub>e</sub>) y ca&iacute;da de regreso al planeta.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T16 -->
+<section class="topic" id="t16">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#d81b60">16</div><span class="week-badge">Semana 9</span></div>
+  <h2>Movimiento Arm&oacute;nico Simple (MAS)</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>Implementar animaciones de rebote, oscilaci&oacute;n de plataformas y vibraci&oacute;n de cuerda en un videojuego usando ecuaciones del MAS, para que reaccionen din&aacute;micamente a par&aacute;metros (masa, rigidez, amortiguamiento) en lugar de usar keyframes fijos.</p>
+  <div class="eq-box">x(t) = A &middot; cos(&omega;t + &phi;)<br>Masa-resorte: &omega; = &radic;(k/m)<br>P&eacute;ndulo:&nbsp; T = 2&pi;&radic;(L/g)<br>Amortiguado: x(t) = A&middot;e<sup>&minus;&gamma;t</sup>&middot;cos(&omega;&apos;t+&phi;)<br>Fuerza: F = &minus;kx &minus; bv</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>Las ecuaciones del MAS generan oscilaciones que responden autom&aacute;ticamente a la masa, rigidez y amortiguamiento. Un resorte m&aacute;s r&iacute;gido (k mayor) da animaciones m&aacute;s r&aacute;pidas; una plataforma m&aacute;s pesada oscila m&aacute;s lento. La versi&oacute;n amortiguada permite simular puertas que se frenan solas o cuerdas que dejan de vibrar, igual que en la realidad.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.5deg">
+  <div class="deco-bow">&#127800;</div>
+  <svg viewBox="0 0 380 260">
+    <line x1="30" y1="225" x2="360" y2="225" stroke="#f7c5d8" stroke-width="1.5"/>
+    <line x1="30" y1="225" x2="30" y2="18" stroke="#f7c5d8" stroke-width="1.5"/>
+    <text x="362" y="229" class="lbl">t</text><text x="14" y="16" class="lbl">x</text>
+    <line x1="30" y1="122" x2="360" y2="122" stroke="var(--pink-pale)" stroke-width="1" stroke-dasharray="3 4"/>
+    <path d="M30,122 C70,38 110,38 150,122 S230,206 270,122 S330,38 360,122" fill="none" stroke="#e8447a" stroke-width="2.5"/>
+    <path d="M30,122 C55,68 80,52 120,75 S185,140 230,122 S300,80 360,95" fill="none" stroke="#f7a8c4" stroke-width="1.8" stroke-dasharray="4 4" opacity="0.85"/>
+    <line x1="34" y1="50" x2="146" y2="50" stroke="#c2185b" stroke-width="1.5" marker-end="url(#arr-d)" marker-start="url(#arr-d)"/>
+    <text x="68" y="40" class="lbl lbl-d">T (periodo)</text>
+    <line x1="16" y1="122" x2="16" y2="42" stroke="#8e44ad" stroke-width="1.5" marker-end="url(#arr-m)" marker-start="url(#arr-m)"/>
+    <text x="2" y="86" class="lbl lbl-m" font-size="9">A</text>
+    <text x="270" y="88" class="lbl" fill="#f7a8c4" font-size="9">amortiguado</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> gr&aacute;fica posici&oacute;n vs. tiempo del MAS con amplitud A y periodo T; curva punteada: MAS amortiguado que decae con el tiempo.</figcaption>
+</figure>
+</div></div>
+</section>
+
+
+<!-- MODULE 3 HEADER -->
+<hr class="section-divider">
+<div class="module-header"><div class="wrap"><span class="module-badge">&#127872; Avance 2 (ampliado) &middot; Semanas 8&ndash;9 (correcciones)</span><h2>Sat&eacute;lites y Exploraci&oacute;n Espacial</h2></div></div>
+
+<!-- T17: Satélites artificiales -->
+<section class="topic" id="t17">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#e8447a">17</div><span class="week-badge">Semana 8</span></div>
+  <h2>Sat&eacute;lites artificiales</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>Un sat&eacute;lite GPS orbita a ~20&#160;200&#160;km de altitud con un per&iacute;odo de ~11h 58min. El software de navegaci&oacute;n calcula en tiempo real la posici&oacute;n del receptor usando la se&ntilde;al de al menos 4 sat&eacute;lites, para lo cual necesita conocer la &oacute;rbita exacta de cada uno.</p>
+  <div class="eq-box">T = 2&pi;&radic;(r&sup3; / G&middot;M<sub>t</sub>)<br>GPS: r &asymp; 26&#160;560 km<br>T &asymp; 11 h 58 min<br>v<sub>orbital</sub> = 2&pi;r / T &asymp; 3,87 km/s</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>El per&iacute;odo orbital depende directamente del radio de la &oacute;rbita mediante la ley de gravitaci&oacute;n. El software GPS necesita este per&iacute;odo y velocidad exactos para predecir d&oacute;nde estar&aacute; cada sat&eacute;lite en cualquier momento. Usar un per&iacute;odo arbitrario generar&iacute;a errores de posicionamiento de kilom&eacute;tros en pocos minutos.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.7deg">
+  <div class="deco-bow">&#127800;</div>
+  <svg viewBox="0 0 380 260">
+    <circle cx="130" cy="130" r="38" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="2"/>
+    <text x="112" y="126" class="lbl lbl-p" font-size="9">Tierra</text>
+    <text x="116" y="140" class="lbl lbl-p" font-size="8">M<tspan font-size="6">t</tspan></text>
+    <ellipse cx="130" cy="130" rx="105" ry="85" fill="none" stroke="#f7a8c4" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <circle cx="235" cy="130" r="7" fill="#e8447a"/>
+    <text x="240" y="115" class="lbl lbl-p" font-size="8">GPS</text>
+    <text x="238" y="126" class="lbl lbl-d" font-size="8">r=26560km</text>
+    <line x1="130" y1="130" x2="235" y2="130" stroke="#8e44ad" stroke-width="1.4" stroke-dasharray="3 3"/>
+    <line x1="235" y1="123" x2="235" y2="80" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <text x="240" y="100" class="lbl lbl-p">v=3,87km/s</text>
+    <circle cx="75" cy="80" r="5" fill="#c2185b"/>
+    <circle cx="48" cy="160" r="5" fill="#c2185b"/>
+    <circle cx="155" cy="48" r="5" fill="#c2185b"/>
+    <text x="40" y="68" class="lbl lbl-d" font-size="8">GPS x4</text>
+    <text x="90" y="200" class="lbl lbl-m" font-size="9">T &asymp; 11h 58min</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> constelaci&oacute;n GPS orbita a 26&#160;560 km con per&iacute;odo de 11h 58min calculado con la ley de gravitaci&oacute;n.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T18: Exploración espacial -->
+<section class="topic" id="t18">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#d81b60">18</div><span class="week-badge">Semana 8</span></div>
+  <h2>Exploraci&oacute;n espacial y asistencia gravitacional</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>La sonda Voyager 1 us&oacute; la maniobra de <em>gravity assist</em> al pasar cerca de J&uacute;piter (1979) para ganar velocidad sin usar combustible. El software de navegaci&oacute;n de la NASA calcul&oacute; la trayectoria exacta aprovechando la gravedad del planeta como "honda".</p>
+  <div class="eq-box">&Delta;v &asymp; 2 &middot; V<sub>planeta</sub><br>Voyager 1: +10 km/s cerca de J&uacute;piter<br>V<sub>escape solar</sub> = &radic;(2G&middot;M<sub>sol</sub>/r)<br>Conservaci&oacute;n de E y p en cada flyby</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>El software de trayectoria debe calcular el <em>flyby</em> usando conservaci&oacute;n de energ&iacute;a y momento: la sonda "toma prestada" energ&iacute;a del movimiento orbital del planeta. Sin las ecuaciones de gravitaci&oacute;n, esta maniobra ser&iacute;a imposible de planificar, ya que requiere calcular con precisi&oacute;n el punto de entrada y salida de la esfera de influencia gravitacional del planeta.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.6deg">
+  <div class="deco-bow">&#127872;</div>
+  <svg viewBox="0 0 380 260">
+    <circle cx="160" cy="130" r="45" fill="#f7c5d8" stroke="#c2185b" stroke-width="2" opacity="0.7"/>
+    <text x="138" y="126" class="lbl lbl-d" font-size="9">J&uacute;piter</text>
+    <line x1="160" y1="130" x2="215" y2="60" stroke="#f7a8c4" stroke-width="1.4" stroke-dasharray="3 3"/>
+    <text x="218" y="55" class="lbl lbl-p" font-size="8">V<tspan font-size="6">planeta</tspan></text>
+    <line x1="160" y1="130" x2="120" y2="80" stroke="#8e44ad" stroke-width="1.4" stroke-dasharray="3 3"/>
+    <path d="M40,220 Q 110,180 140,100 Q 158,68 200,50 Q 280,20 350,30" fill="none" stroke="#e8447a" stroke-width="2.2"/>
+    <circle cx="40" cy="220" r="5" fill="#8e44ad"/>
+    <text x="18" y="240" class="lbl lbl-m" font-size="8">entrada</text>
+    <line x1="335" y1="32" x2="350" y2="30" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <text x="290" y="20" class="lbl lbl-p" font-size="8">salida (+10 km/s)</text>
+    <text x="60" y="140" class="lbl lbl-d" font-size="8">&Delta;v&asymp;2V<tspan font-size="6">planeta</tspan></text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> maniobra gravity assist: la sonda curva su trayectoria alrededor de J&uacute;piter ganando &Delta;v &asymp; 2V<sub>planeta</sub> por conservaci&oacute;n de energ&iacute;a.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- MODULE 3 HEADER -->
+<hr class="section-divider">
+<div class="module-header"><div class="wrap"><span class="module-badge">&#127872; Avance 3 &middot; Semanas 10&ndash;11</span><h2>Ondas, Fluidos y Din&aacute;mica de Fluidos</h2></div></div>
+
+<!-- T19: Ondas mecánicas -->
+<section class="topic" id="t19">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#8e44ad">19</div><span class="week-badge">Semana 10</span></div>
+  <h2>Ondas mec&aacute;nicas y propagaci&oacute;n</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un motor de audio o sintetizador digital (como FMOD o Unity AudioSource), generar sonidos din&aacute;micos modificando amplitud, frecuencia y fase de la onda en tiempo real, en vez de reproducir un archivo de audio pregrabado.</p>
+  <div class="eq-box">y(x,t) = y<sub>m</sub>&middot;sen(kx &minus; &omega;t + &psi;)<br>k = 2&pi;/&lambda; &nbsp;(n&uacute;mero de onda)<br>v = &lambda;f = &omega;/k<br>&lambda;: longitud de onda, f: frecuencia</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>La ecuaci&oacute;n de onda permite generar cualquier sonido de forma procedural modificando sus par&aacute;metros (amplitud, frecuencia, fase). En motores de audio esto es esencial para efectos Doppler, reverberaci&oacute;n y s&iacute;ntesis de instrumentos. La alternativa &mdash;usar archivos pregrabados fijos&mdash; no puede adaptarse en tiempo real a la posici&oacute;n o velocidad del objeto en el juego.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.7deg">
+  <div class="deco-bow">&#127801;</div>
+  <svg viewBox="0 0 380 260">
+    <line x1="20" y1="130" x2="370" y2="130" stroke="#f7c5d8" stroke-width="1.4"/>
+    <line x1="20" y1="20" x2="20" y2="240" stroke="#f7c5d8" stroke-width="1.4"/>
+    <text x="372" y="134" class="lbl">x</text>
+    <text x="6" y="18" class="lbl">y</text>
+    <path d="M30,130 C55,50 90,50 120,130 S185,210 215,130 S280,50 310,130 S360,185 370,160" fill="none" stroke="#e8447a" stroke-width="2.5"/>
+    <line x1="30" y1="30" x2="30" y2="125" stroke="#8e44ad" stroke-width="1.5" marker-end="url(#arr-m)" marker-start="url(#arr-m)"/>
+    <text x="4" y="80" class="lbl lbl-m" font-size="9">y<tspan font-size="7">m</tspan></text>
+    <line x1="35" y1="26" x2="214" y2="26" stroke="#c2185b" stroke-width="1.5" marker-end="url(#arr-d)" marker-start="url(#arr-d)"/>
+    <text x="92" y="18" class="lbl lbl-d">&lambda;</text>
+    <line x1="330" y1="130" x2="370" y2="130" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <text x="340" y="120" class="lbl lbl-p">v</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> onda mec&aacute;nica con amplitud y<sub>m</sub>, longitud de onda &lambda; y direcci&oacute;n de propagaci&oacute;n v.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T20: Ondas en cuerdas -->
+<section class="topic" id="t20">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#e8447a">20</div><span class="week-badge">Semana 10</span></div>
+  <h2>Ondas en cuerdas y arm&oacute;nicos</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un simulador de instrumentos de cuerda (guitarra, viol&iacute;n), calcular las frecuencias naturales de vibraci&oacute;n de cada cuerda seg&uacute;n su tensi&oacute;n, longitud y densidad lineal, para sintetizar el sonido correcto al pulsar una nota.</p>
+  <div class="eq-box">v = &radic;(T/&mu;) &nbsp;(&mu; = m/L)<br>&lambda;<sub>n</sub> = 2L/n<br>f<sub>n</sub> = n/(2L) &middot; &radic;(T/&mu;)<br>n = 1, 2, 3... (arm&oacute;nicos)</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>Estas f&oacute;rmulas permiten calcular el tono exacto que produce cada cuerda seg&uacute;n su affinaci&oacute;n (tensi&oacute;n T) y material (&mu;). En un simulador de guitarra, variar T cambia el tono igual que al afinar; usar valores arbitrarios producir&iacute;a frecuencias incorrectas que no corresponden a ninguna nota musical real.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.6deg">
+  <div class="deco-bow">&#127872;</div>
+  <svg viewBox="0 0 380 260">
+    <line x1="20" y1="80" x2="20" y2="95" stroke="#ink" stroke-width="2"/>
+    <line x1="360" y1="80" x2="360" y2="95" stroke="#ink" stroke-width="2"/>
+    <path d="M20,87 Q 190,30 360,87" fill="none" stroke="#e8447a" stroke-width="2"/>
+    <text x="165" y="20" class="lbl lbl-p">n=1 (fundamental)</text>
+    <line x1="20" y1="145" x2="20" y2="160" stroke="#ink" stroke-width="2"/>
+    <line x1="360" y1="145" x2="360" y2="160" stroke="#ink" stroke-width="2"/>
+    <path d="M20,152 Q 95,110 190,152 Q 275,194 360,152" fill="none" stroke="#c2185b" stroke-width="2"/>
+    <text x="165" y="200" class="lbl lbl-d">n=2</text>
+    <line x1="20" y1="215" x2="20" y2="228" stroke="#ink" stroke-width="2"/>
+    <line x1="360" y1="215" x2="360" y2="228" stroke="#ink" stroke-width="2"/>
+    <path d="M20,222 Q 73,190 127,222 Q 190,255 253,222 Q 307,188 360,222" fill="none" stroke="#8e44ad" stroke-width="2"/>
+    <text x="165" y="250" class="lbl lbl-m">n=3</text>
+    <text x="155" y="8" class="lbl lbl-d" font-size="9">L</text>
+    <line x1="22" y1="6" x2="358" y2="6" stroke="#c2185b" stroke-width="1" marker-end="url(#arr-d)" marker-start="url(#arr-d)"/>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> primeros tres arm&oacute;nicos de una cuerda de longitud L. n=1 es la frecuencia fundamental, n=2 el primer arm&oacute;nico.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T21: Presión hidrostática -->
+<section class="topic" id="t21">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#d81b60">21</div><span class="week-badge">Semana 10</span></div>
+  <h2>Presi&oacute;n hidrost&aacute;tica y estabilidad</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un simulador de submarinos, calcular la presi&oacute;n que ejerce el agua sobre el casco a distintas profundidades, para determinar si el material aguanta o si el submarino puede hundirse sin implosionar.</p>
+  <div class="eq-box">P = F/A &nbsp;(Pascales)<br>P<sub>hidrost&aacute;tica</sub> = &rho;gh<br>P<sub>total</sub> = P<sub>0</sub> + &rho;gh<br>P<sub>0</sub> = 1 atm = 1,013&times;10<sup>5</sup> Pa</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>La presi&oacute;n del agua crece linealmente con la profundidad. En el simulador esta f&oacute;rmula permite calcular el estr&eacute;s estructural exacto sobre el casco a cada metro de descenso, activando alertas o da&ntilde;os cuando se supera el l&iacute;mite del material. Sin ella, la profundidad no tendr&iacute;a consecuencias f&iacute;sicas reales en la simulaci&oacute;n.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.6deg">
+  <div class="deco-bow">&#127800;</div>
+  <svg viewBox="0 0 380 260">
+    <rect x="40" y="20" width="220" height="220" rx="4" fill="#e8f4fd" stroke="#f7c5d8" stroke-width="1.5"/>
+    <line x1="40" y1="20" x2="260" y2="20" stroke="#a8d8ea" stroke-width="3"/>
+    <text x="265" y="26" class="lbl lbl-p">superficie</text>
+    <line x1="30" y1="80" x2="40" y2="80" stroke="#e8447a" stroke-width="1.5" stroke-dasharray="2 3"/>
+    <line x1="30" y1="140" x2="40" y2="140" stroke="#c2185b" stroke-width="1.5" stroke-dasharray="2 3"/>
+    <line x1="30" y1="200" x2="40" y2="200" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="2 3"/>
+    <text x="4" y="85" class="lbl lbl-p" font-size="9">h=2m</text>
+    <text x="4" y="145" class="lbl lbl-d" font-size="9">h=6m</text>
+    <text x="4" y="205" class="lbl lbl-m" font-size="9">h=10m</text>
+    <rect x="90" y="68" width="30" height="24" rx="3" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="1.5"/>
+    <line x1="80" y1="80" x2="90" y2="80" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <line x1="120" y1="80" x2="130" y2="80" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <line x1="105" y1="68" x2="105" y2="58" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <line x1="105" y1="92" x2="105" y2="102" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <text x="285" y="70" class="lbl lbl-p">P = &rho;g&middot;2</text>
+    <text x="285" y="140" class="lbl lbl-d">P = &rho;g&middot;6</text>
+    <text x="285" y="205" class="lbl lbl-m">P = &rho;g&middot;10</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> presi&oacute;n hidrost&aacute;tica act&uacute;a en todas las direcciones y crece linealmente con la profundidad h.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T22: Pascal y Arquímedes -->
+<section class="topic" id="t22">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#8e44ad">22</div><span class="week-badge">Semana 10</span></div>
+  <h2>Principio de Pascal y Principio de Arqu&iacute;medes</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un simulador de maquinaria pesada (excavadora, gr&uacute;a hidr&aacute;ulica), calcular la fuerza amplificada que genera el pist&oacute;n grande con una peque&ntilde;a fuerza de entrada (Pascal), y simular si los objetos flotan o se hunden en un motor de f&iacute;sica de fluidos (Arqu&iacute;medes).</p>
+  <div class="eq-box">Pascal: P<sub>A</sub> = P<sub>B</sub> &rarr; F<sub>A</sub>/A<sub>A</sub> = F<sub>B</sub>/A<sub>B</sub><br>Arqu&iacute;medes: F<sub>B</sub> = &rho;<sub>fluido</sub>&middot;V<sub>desplazado</sub>&middot;g<br>Si F<sub>B</sub> &gt; mg &rarr; flota<br>Si F<sub>B</sub> &lt; mg &rarr; se hunde</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>Pascal permite que el simulador calcule autom&aacute;ticamente la fuerza de salida del pist&oacute;n grande a partir de la fuerza de entrada, replicando la ventaja mec&aacute;nica real de los sistemas hidr&aacute;ulicos. Arqu&iacute;medes determina si un objeto flota o se hunde seg&uacute;n su densidad y forma, creando comportamientos realistas en simulaciones de mar o rios sin valores arbitrarios.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.5deg">
+  <div class="deco-bow">&#127801;</div>
+  <svg viewBox="0 0 380 260">
+    <rect x="30" y="100" width="130" height="100" rx="3" fill="#e8f4fd" stroke="#f7c5d8" stroke-width="1.5"/>
+    <rect x="26" y="55" width="22" height="60" rx="2" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="1.5"/>
+    <rect x="130" y="80" width="24" height="35" rx="2" fill="var(--pink-pale)" stroke="#c2185b" stroke-width="1.5"/>
+    <line x1="37" y1="55" x2="37" y2="28" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <text x="44" y="24" class="lbl lbl-p">F<tspan font-size="7">A</tspan> peq.</text>
+    <line x1="142" y1="80" x2="142" y2="50" stroke="#c2185b" stroke-width="3" marker-end="url(#arr-d)"/>
+    <text x="148" y="46" class="lbl lbl-d">F<tspan font-size="7">B</tspan> grande!</text>
+    <text x="55" y="168" class="lbl lbl-p" font-size="9">P<tspan font-size="7">A</tspan>=P<tspan font-size="7">B</tspan></text>
+    <line x1="20" y1="210" x2="380" y2="210" stroke="#a8d8ea" stroke-width="3"/>
+    <rect x="240" y="180" width="35" height="28" rx="3" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="1.5"/>
+    <line x1="258" y1="180" x2="258" y2="148" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <text x="264" y="144" class="lbl lbl-p">F<tspan font-size="7">B</tspan></text>
+    <line x1="258" y1="208" x2="258" y2="240" stroke="#c2185b" stroke-width="2" marker-end="url(#arr-d)"/>
+    <text x="264" y="250" class="lbl lbl-d">mg</text>
+    <rect x="295" y="195" width="50" height="50" rx="3" fill="#e8447a" opacity="0.15" stroke="#8e44ad" stroke-width="1.5"/>
+    <line x1="320" y1="195" x2="320" y2="165" stroke="#8e44ad" stroke-width="2" marker-end="url(#arr-m)"/>
+    <text x="326" y="160" class="lbl lbl-m">F<tspan font-size="7">B</tspan></text>
+    <line x1="320" y1="245" x2="320" y2="258" stroke="#c2185b" stroke-width="2" marker-end="url(#arr-d)"/>
+    <text x="314" y="260" class="lbl lbl-d">mg</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> sistema hidr&aacute;ulico (Pascal) amplifica F<sub>A</sub> con mayor &aacute;rea, y dos objetos en agua con distinto F<sub>B</sub> vs mg (Arqu&iacute;medes).</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T23: Ecuación de Continuidad -->
+<section class="topic" id="t23">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#e8447a">23</div><span class="week-badge">Semana 11</span></div>
+  <h2>Ecuaci&oacute;n de Continuidad</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En la simulaci&oacute;n de una red de tuber&iacute;as (agua potable, riego, oleoducto), calcular a qu&eacute; velocidad fluye el agua en cada secci&oacute;n de la red cuando cambia el di&aacute;metro de la tuber&iacute;a.</p>
+  <div class="eq-box">Q = A&middot;V (caudal, m&sup3;/s)<br>A<sub>1</sub>&middot;V<sub>1</sub> = A<sub>2</sub>&middot;V<sub>2</sub><br>Si A&darr; entonces V&uarr;<br>Si A&uarr; entonces V&darr;</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>La continuidad garantiza que la masa se conserva: lo que entra a la tuber&iacute;a debe salir. En el simulador de red h&iacute;drica, esto permite calcular autom&aacute;ticamente la velocidad en cada tramo seg&uacute;n su di&aacute;metro, sin necesidad de definirla manualmente para cada secci&oacute;n, y detectar zonas de alta velocidad que podr&iacute;an da&ntilde;ar la tuber&iacute;a.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.6deg">
+  <div class="deco-bow">&#127872;</div>
+  <svg viewBox="0 0 380 260">
+    <path d="M20,90 L120,90 L150,110 L230,110 L260,90 L360,90" fill="none" stroke="#f7c5d8" stroke-width="1.5"/>
+    <path d="M20,160 L120,160 L150,140 L230,140 L260,160 L360,160" fill="none" stroke="#f7c5d8" stroke-width="1.5"/>
+    <rect x="20" y="90" width="100" height="70" fill="#e8f4fd" stroke="none" opacity="0.6"/>
+    <rect x="150" y="110" width="80" height="30" fill="#f7a8c4" stroke="none" opacity="0.6"/>
+    <rect x="260" y="90" width="100" height="70" fill="#e8f4fd" stroke="none" opacity="0.6"/>
+    <line x1="40" y1="125" x2="110" y2="125" stroke="#e8447a" stroke-width="2.5" marker-end="url(#arr-p)"/>
+    <text x="44" y="116" class="lbl lbl-p">V<tspan font-size="7">1</tspan> lento</text>
+    <line x1="160" y1="125" x2="220" y2="125" stroke="#c2185b" stroke-width="2.5" marker-end="url(#arr-d)"/>
+    <text x="162" y="108" class="lbl lbl-d">V<tspan font-size="7">2</tspan> r&aacute;pido!</text>
+    <line x1="270" y1="125" x2="340" y2="125" stroke="#e8447a" stroke-width="2.5" marker-end="url(#arr-p)"/>
+    <text x="274" y="116" class="lbl lbl-p">V<tspan font-size="7">3</tspan> lento</text>
+    <text x="36" y="78" class="lbl lbl-p">A<tspan font-size="7">1</tspan> grande</text>
+    <text x="155" y="102" class="lbl lbl-d">A<tspan font-size="7">2</tspan> peq.</text>
+    <text x="266" y="78" class="lbl lbl-p">A<tspan font-size="7">3</tspan> grande</text>
+    <text x="90" y="200" class="lbl lbl-d" font-size="9">A<tspan font-size="7">1</tspan>&middot;V<tspan font-size="7">1</tspan> = A<tspan font-size="7">2</tspan>&middot;V<tspan font-size="7">2</tspan> = A<tspan font-size="7">3</tspan>&middot;V<tspan font-size="7">3</tspan> = constante</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> tuber&iacute;a que se estrecha: al disminuir el &aacute;rea, aumenta la velocidad para conservar el caudal Q.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T24: Bernoulli y efecto Venturi -->
+<section class="topic" id="t24">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#d81b60">24</div><span class="week-badge">Semana 11</span></div>
+  <h2>Ecuaci&oacute;n de Bernoulli y efecto Venturi</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un simulador de vuelo, calcular la sustentaci&oacute;n (lift) del ala de un avi&oacute;n: el aire va m&aacute;s r&aacute;pido por encima del ala que por debajo, generando menor presi&oacute;n arriba y una fuerza ascendente que mantiene el avi&oacute;n en el aire.</p>
+  <div class="eq-box">P<sub>1</sub> + &rho;gh<sub>1</sub> + &frac12;&rho;V<sub>1</sub>&sup2; = P<sub>2</sub> + &rho;gh<sub>2</sub> + &frac12;&rho;V<sub>2</sub>&sup2;<br>Venturi (h cte): P<sub>1</sub> + &frac12;&rho;V<sub>1</sub>&sup2; = P<sub>2</sub> + &frac12;&rho;V<sub>2</sub>&sup2;<br>V<sub>2</sub> &gt; V<sub>1</sub> &rArr; P<sub>2</sub> &lt; P<sub>1</sub><br>A mayor velocidad, menor presi&oacute;n</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>Bernoulli permite calcular la diferencia de presi&oacute;n entre la superficie superior e inferior del ala seg&uacute;n su velocidad relativa, obteniendo la fuerza de sustentaci&oacute;n real. En el simulador de vuelo, esto hace que el avi&oacute;n despegue o aterrice en funci&oacute;n de su velocidad real, igual que en la realidad, en vez de usar una fuerza ascendente constante y arbitraria.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.5deg">
+  <div class="deco-bow">&#127800;</div>
+  <svg viewBox="0 0 380 260">
+    <path d="M30,130 Q 190,100 350,130" fill="none" stroke="#f7c5d8" stroke-width="1"/>
+    <path d="M30,160 Q 100,145 190,142 Q 260,140 350,160" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="2"/>
+    <path d="M30,130 Q 100,115 190,112 Q 260,110 350,130" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="2"/>
+    <line x1="50" y1="115" x2="50" y2="145" stroke="#e8447a" stroke-width="1.5" stroke-dasharray="2 3"/>
+    <line x1="190" y1="108" x2="190" y2="146" stroke="#c2185b" stroke-width="1.5" stroke-dasharray="2 3"/>
+    <line x1="40" y1="110" x2="90" y2="110" stroke="#c2185b" stroke-width="2" marker-end="url(#arr-d)"/>
+    <text x="40" y="103" class="lbl lbl-d">V<tspan font-size="7">arriba</tspan> r&aacute;p.</text>
+    <line x1="40" y1="150" x2="76" y2="150" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <text x="40" y="162" class="lbl lbl-p">V<tspan font-size="7">abajo</tspan> lento</text>
+    <line x1="260" y1="100" x2="260" y2="70" stroke="#8e44ad" stroke-width="2.5" marker-end="url(#arr-m)"/>
+    <text x="266" y="68" class="lbl lbl-m">Lift!</text>
+    <text x="152" y="95" class="lbl lbl-d" font-size="9">P<tspan font-size="7">arriba</tspan> baja</text>
+    <text x="152" y="170" class="lbl lbl-p" font-size="9">P<tspan font-size="7">abajo</tspan> alta</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> ala de avi&oacute;n: mayor velocidad arriba &rarr; menor presi&oacute;n &rarr; fuerza de sustentaci&oacute;n (Lift) hacia arriba por Bernoulli.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- MODULE 4 HEADER -->
+<hr class="section-divider">
+<div class="module-header"><div class="wrap"><span class="module-badge">&#127872; Avance 4 &middot; Semana 12</span><h2>Termodin&aacute;mica: Temperatura, Expansi&oacute;n y Gases</h2></div></div>
+
+<!-- T25: Temperatura y escalas -->
+<section class="topic" id="t25">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#e8447a">25</div><span class="week-badge">Semana 12</span></div>
+  <h2>Temperatura y escalas termom&eacute;tricas</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un simulador de entornos f&iacute;sicos (como un motor de videojuego que cambia el comportamiento del terreno seg&uacute;n el clima), convertir entre escalas de temperatura para que los sistemas internos trabajen siempre en Kelvin mientras el usuario ve grados Celsius o Fahrenheit.</p>
+  <div class="eq-box">K = &deg;C + 273,15<br>&deg;C = (5/9)&middot;(&deg;F &minus; 32)<br>Cero absoluto: 0 K = &minus;273,15 &deg;C<br>&rarr; Cesa el movimiento molecular</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>Los c&aacute;lculos termodin&aacute;micos internos siempre usan Kelvin (escala absoluta, nunca negativa). Convertir autom&aacute;ticamente las temperaturas que ingresa el usuario permite que el motor use siempre la escala correcta sin errores, ya que operar con valores negativos en f&oacute;rmulas que asumen temperatura absoluta generar&iacute;a resultados f&iacute;sicamente imposibles.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.7deg">
+  <div class="deco-bow">&#127872;</div>
+  <svg viewBox="0 0 380 260">
+    <rect x="60" y="20" width="30" height="200" rx="15" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="1.5"/>
+    <rect x="65" y="120" width="20" height="95" rx="10" fill="#e8447a" opacity="0.7"/>
+    <circle cx="75" cy="215" r="14" fill="#e8447a"/>
+    <line x1="90" y1="120" x2="110" y2="120" stroke="#c2185b" stroke-width="1.5"/>
+    <line x1="90" y1="75" x2="110" y2="75" stroke="#c2185b" stroke-width="1.5"/>
+    <line x1="90" y1="215" x2="110" y2="215" stroke="#8e44ad" stroke-width="1.5"/>
+    <text x="114" y="124" class="lbl lbl-d">0&deg;C / 273 K</text>
+    <text x="114" y="79" class="lbl lbl-d">100&deg;C / 373 K</text>
+    <text x="114" y="219" class="lbl lbl-m">&minus;273&deg;C / 0 K</text>
+    <text x="114" y="234" class="lbl lbl-m">Cero absoluto</text>
+    <rect x="200" y="30" width="70" height="200" rx="4" fill="var(--pink-pale)" stroke="#f7c5d8" stroke-width="1.5"/>
+    <text x="210" y="55" class="lbl lbl-p" font-size="10">Kelvin</text>
+    <text x="210" y="100" class="lbl lbl-d" font-size="10">Celsius</text>
+    <text x="210" y="145" class="lbl lbl-m" font-size="10">Fahrenheit</text>
+    <line x1="270" y1="90" x2="320" y2="90" stroke="#e8447a" stroke-width="1.5" marker-end="url(#arr-p)"/>
+    <line x1="270" y1="108" x2="320" y2="108" stroke="#c2185b" stroke-width="1.5" marker-end="url(#arr-d)"/>
+    <text x="285" y="86" class="lbl lbl-p" font-size="8">+273</text>
+    <text x="280" y="122" class="lbl lbl-d" font-size="8">&times;9/5+32</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> term&oacute;metro comparando tres escalas y sus puntos de referencia (congelaci&oacute;n, ebullici&oacute;n y cero absoluto).</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T26: Expansión térmica -->
+<section class="topic" id="t26">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#d81b60">26</div><span class="week-badge">Semana 12</span></div>
+  <h2>Expansi&oacute;n t&eacute;rmica</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un simulador de estructuras o ingenier&iacute;a civil, calcular cuánto se dilata un puente de acero o un riel de tren al cambiar la temperatura, para verificar que las juntas de dilataci&oacute;n tengan el espacio adecuado y la estructura no sufra da&ntilde;os.</p>
+  <div class="eq-box">Lineal: &Delta;L = &alpha;&middot;L&middot;&Delta;T<br>Superficial: &Delta;A = 2&alpha;&middot;A&middot;&Delta;T<br>Volum&eacute;trica s&oacute;lidos: &Delta;V = 3&alpha;&middot;V&middot;&Delta;T<br>L&iacute;quidos: &Delta;V = &beta;&middot;V&middot;&Delta;T<br>Cobre: &alpha;=17&times;10<sup>&minus;6</sup> &deg;C<sup>&minus;1</sup></div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>La expansi&oacute;n t&eacute;rmica permite calcular exactamente cu&aacute;nto se dilata cada material seg&uacute;n su coeficiente &alpha; propio. En el simulador de estructuras, esto detecta autom&aacute;ticamente si las juntas de dilataci&oacute;n de un puente son insuficientes para el rango de temperatura de la regi&oacute;n, previniendo fallos estructurales que no aparecer&iacute;an con valores fijos de deformaci&oacute;n.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:-0.6deg">
+  <div class="deco-bow">&#127800;</div>
+  <svg viewBox="0 0 380 260">
+    <rect x="40" y="110" width="120" height="30" rx="4" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="1.5"/>
+    <text x="92" y="130" class="lbl lbl-p" font-size="9">L</text>
+    <rect x="200" y="105" width="140" height="40" rx="4" fill="#f7a8c4" stroke="#c2185b" stroke-width="1.5" opacity="0.7"/>
+    <text x="260" y="130" class="lbl lbl-d" font-size="9">L + &Delta;L</text>
+    <line x1="40" y1="100" x2="160" y2="100" stroke="#e8447a" stroke-width="1.4" marker-end="url(#arr-p)" marker-start="url(#arr-p)"/>
+    <line x1="200" y1="94" x2="340" y2="94" stroke="#c2185b" stroke-width="1.4" marker-end="url(#arr-d)" marker-start="url(#arr-d)"/>
+    <text x="72" y="92" class="lbl lbl-p">L</text>
+    <text x="248" y="86" class="lbl lbl-d">L + &Delta;L</text>
+    <line x1="190" y1="60" x2="190" y2="200" stroke="#f7c5d8" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="40" y="160" class="lbl lbl-p" font-size="9">T<tspan font-size="6">1</tspan> (fr&iacute;o)</text>
+    <text x="210" y="160" class="lbl lbl-d" font-size="9">T<tspan font-size="6">2</tspan> (calor)</text>
+    <line x1="80" y1="180" x2="155" y2="180" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <text x="160" y="184" class="lbl lbl-d" font-size="9">&Delta;T &uarr;</text>
+    <text x="40" y="220" class="lbl lbl-p" font-size="9">&Delta;L = &alpha;&middot;L&middot;&Delta;T</text>
+    <text x="200" y="220" class="lbl lbl-d" font-size="9">Cobre: &alpha;=17&times;10<sup style='font-size:7px'>-6</sup>/&deg;C</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> barra met&aacute;lica que se expande &Delta;L al aumentar la temperatura &Delta;T, seg&uacute;n su coeficiente &alpha;.</figcaption>
+</figure>
+</div></div>
+</section>
+
+<!-- T27: Ley de gases ideales -->
+<section class="topic" id="t27">
+<div class="wrap"><div class="topic-grid">
+<div class="topic-text">
+  <div class="topic-num-wrap"><div class="topic-num" style="--c:#8e44ad">27</div><span class="week-badge">Semana 12</span></div>
+  <h2>Ley de los gases ideales</h2>
+  <p class="section-label">Caso en ingenier&iacute;a de software</p>
+  <p>En un simulador de motores de combusti&oacute;n interna (como los de F1 o juegos de carreras con f&iacute;sica avanzada), calcular la presi&oacute;n y temperatura de los gases dentro del cil&iacute;ndro despu&eacute;s de la combusti&oacute;n, para determinar la fuerza que ejerce sobre el pist&oacute;n.</p>
+  <div class="eq-box">pV = nRT<br>R = 8,31 J/(mol&middot;K)<br>N<sub>A</sub> = 6,02&times;10<sup>23</sup> mol&eacute;culas/mol<br>T siempre en Kelvin<br>p en Pa, V en m&sup3;, n en moles</div>
+  <p class="section-label">Justificaci&oacute;n</p>
+  <div class="just-box"><p>La ley de gases ideales relaciona presi&oacute;n, volumen y temperatura del gas en el cil&iacute;ndro. En el simulador del motor, esto permite calcular la fuerza exacta que los gases ejercen sobre el pist&oacute;n en cada ciclo, determinando la potencia generada. La alternativa &mdash;una fuerza constante&mdash; no reflejar&iacute;a el cambio de potencia con la temperatura ni la compresi&oacute;n real del gas.</p></div>
+</div>
+<figure class="diagram-frame" style="--rot:0.5deg">
+  <div class="deco-bow">&#127801;</div>
+  <svg viewBox="0 0 380 260">
+    <rect x="100" y="40" width="90" height="160" rx="6" fill="var(--pink-pale)" stroke="#e8447a" stroke-width="2"/>
+    <rect x="108" y="50" width="74" height="100" rx="4" fill="#f7a8c4" opacity="0.5"/>
+    <rect x="105" y="155" width="80" height="20" rx="3" fill="#e8447a" opacity="0.6"/>
+    <line x1="145" y1="155" x2="145" y2="205" stroke="#c2185b" stroke-width="4" stroke-linecap="round"/>
+    <text x="155" y="225" class="lbl lbl-d">pist&oacute;n</text>
+    <line x1="145" y1="40" x2="145" y2="10" stroke="#8e44ad" stroke-width="2" marker-end="url(#arr-m)" marker-start="url(#arr-m)"/>
+    <text x="152" y="28" class="lbl lbl-m">V</text>
+    <line x1="78" y1="100" x2="100" y2="100" stroke="#e8447a" stroke-width="2" marker-end="url(#arr-p)"/>
+    <text x="28" y="95" class="lbl lbl-p">P&uarr;</text>
+    <text x="28" y="108" class="lbl lbl-d">T&uarr;</text>
+    <text x="110" y="108" class="lbl lbl-d" font-size="9">n mol gas</text>
+    <text x="106" y="125" class="lbl lbl-m" font-size="8">pV=nRT</text>
+    <rect x="245" y="60" width="80" height="60" rx="4" fill="var(--pink-pale)" stroke="#f7c5d8" stroke-width="1.5"/>
+    <text x="255" y="80" class="lbl lbl-p" font-size="9">p sube &uarr;</text>
+    <text x="255" y="96" class="lbl lbl-d" font-size="9">V baja &darr;</text>
+    <text x="255" y="112" class="lbl lbl-m" font-size="9">T sube &uarr;</text>
+    <text x="250" y="145" class="lbl lbl-d" font-size="8">combusti&oacute;n</text>
+  </svg>
+  <figcaption><b>Elemento de apoyo:</b> cil&iacute;ndro de motor: la combusti&oacute;n sube T y p, empujando el pist&oacute;n seg&uacute;n pV=nRT.</figcaption>
+</figure>
+</div></div>
+</section>
+<footer>
+<div class="wrap footer-inner">
+  <div>
+    <p class="signature">Andreina Leal Vega &#127872;</p>
+    <p class="type-line" style="margin-top:6px;">F&iacute;sica I (FUN-18) &middot; Portafolio Completo &middot; Periodo 2026-C2 &middot; Universidad CENFOTEC</p>
+  </div>
+  <p class="type-line">Docente: Andr&eacute;s Castro N&uacute;&ntilde;ez</p>
+</div>
+</footer>
+
+<script>
+const links=document.querySelectorAll(".nav-links a");
+const sections=document.querySelectorAll("section.topic,header.hero");
+if("IntersectionObserver" in window){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        links.forEach(l=>l.classList.remove("active"));
+        const m=document.querySelector(".nav-links a[href=\"#"+e.target.id+"\"]");
+        if(m)m.classList.add("active");
+      }
+    });
+  },{rootMargin:"-40% 0px -50% 0px"});
+  sections.forEach(s=>obs.observe(s));
+}
+</script>
+</body>
+</html>
